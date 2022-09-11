@@ -1,0 +1,52 @@
+@use '../../styles/sass/abstracts/' as *;
+
+.showcaseImg {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  justify-content: center;
+  margin-top: -100px;
+  margin-left: -30px;
+}
+
+.heroPhoneLeftWrapper{
+  z-index: 2;
+  display: grid;
+  justify-content: flex-end;
+  width: 100%;
+  margin-left: 50px;
+  margin-top: -150px;  
+}
+
+.heroPhoneLeftShadow {
+  margin: auto;
+  grid-column: 1;
+  grid-row: 1;
+  width: 50%;
+  height: 50%;
+  justify-self: flex-end;
+  box-shadow: 34px 54px 100px #252b427a;
+}
+
+.leftPhone {
+  justify-self: flex-end;
+  max-width: 300px;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.heroRightPhoneWrapper {
+  display: grid;
+  align-items: center;
+}
+
+.rightPhone {
+  max-width: 300px;
+}
+
+@media screen and (max-width: $breakpoint-mobile ) {
+  .showcaseImg {
+    margin-top: -50px;
+  }
+}

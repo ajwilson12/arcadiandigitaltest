@@ -1,0 +1,105 @@
+@use '../../styles/sass/abstracts/' as *;
+
+.navigation {
+  position: absolute;
+  top:0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 50px;
+  overflow: hidden;
+  background-color: $primary-color;
+  z-index: 3;
+}
+
+.navLogo {
+  max-width: 246px;
+}
+
+.mobileMenuSwitch {
+  cursor: pointer;
+  display: none;
+}
+
+
+.navList {
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  max-width: 580px;
+  .navItem {
+    cursor: pointer;
+    p {
+      font-size: $alt-text-size;
+      font-weight: $semiBold;
+    }
+  }
+  .navItem:hover {
+    color: $brand-color;
+  }
+}
+
+@media screen and (max-width: $breakpoint-small-screen ) {
+  .navigation {
+   position: fixed;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: min-content, 100%;
+   align-items: flex-start;
+   margin: 0;
+  }
+
+  .navElements {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .mobileMenuSwitch {
+    display: flex;
+    align-items: center;
+  }
+
+  .navList {
+    position: fixed;
+    margin-top: var(--nav-height);
+    transition: right, 0.3s ease-out;
+    right: -100%;
+    top: 0px;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100% - var(--nav-height));
+    background-color: $primary-color;
+    .navItem {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      p {
+        font-size: $alt-text-size;
+        padding: 0%;
+      }
+    }
+  }
+  
+  .navLogo {
+      display: flex;
+      justify-content: flex-start;
+      max-width: 154px;
+    }
+}
+
+@media screen and (max-width: $breakpoint-mobile ) {
+  .navigation {
+    padding: 10px 20px;
+  }
+  
+  .navLogo {
+      display: flex;
+      justify-content: flex-start;
+      max-width: 104px;
+    }
+}

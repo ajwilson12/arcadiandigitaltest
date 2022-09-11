@@ -1,0 +1,92 @@
+@use '../../styles/sass/abstracts/' as *;
+
+.heroBackground {
+  width: 100%;
+  // update with context later
+  // height: calc(100vh - 222px);
+  min-height: 800px;
+  background: url("../../assets/img/HeroImg.png") #17101090 no-repeat center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroContent {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  color: $primary-color;
+}
+
+.subHeading {
+  font-weight: $bold;
+  letter-spacing: $letter-spacing-subHeading;
+  color: $secondary-light;
+  margin-bottom: 30px;
+}
+
+.heroHeading {
+  font-family: $primary-font;
+  font-size: $display-size;
+  // might change
+  line-height: 80px;
+  margin-bottom: 40px;
+}
+
+.heroText {
+  font-size: $text-size;
+  font-weight: $medium;
+  color: $secondary-light;
+  margin-bottom: 50px;
+  line-height: 38px;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 34px;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: $breakpoint-small-screen ) {
+  .heroHeading {
+    font-size: 2.75rem;
+    line-height: 60px;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-tablet ) {
+  
+  .heroHeading {
+    font-family: $display-font;
+    font-size: 2.25rem;
+    line-height: 42.5px;
+    margin-bottom: 40px;
+  }
+  .buttonWrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .heroContent {
+    margin-top: -5%;
+  }
+
+  .heroBackground {
+    background: transparent;
+    .subHeading {
+      color: $grey-text;
+    }
+    .heroHeading {
+      color: $main-dark;
+    }
+    .heroText {
+      color: $grey-text;
+    }
+  }
+}

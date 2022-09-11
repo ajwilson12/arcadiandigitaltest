@@ -1,14 +1,23 @@
 @use '../abstracts/' as *;
-@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Monoton&display=swap');
 
-// Fredericka the great font / oswald font
-@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+//  Poppins / bold - semi bold
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+
+// Montserrat / bold - semi bold - medium 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+
+:root {
+  font-size: 16px;
+}
 
 html,
 body {
   font-family: $primary-font;
-  background-color: #ffffff;
+  color: $main-dark;
+  background-color: $primary-color;
   font-size: $text-size;
+  letter-spacing: $letter-spacing;
+  overflow-x: hidden;
 }
 
 a {

@@ -2,11 +2,11 @@
 import React from "react";
 
 // styles
-import styles from "./ButtonPrimary.module.scss";
+import styles from "./ButtonSecondary.module.scss";
 
 const ButtonPrimary = (props) => {
   return (
-    <div className={styles.buttonPrimary}>
+    <div className={styles.buttonSecondary}>
       <p>{props.text}</p>
     </div>
   );

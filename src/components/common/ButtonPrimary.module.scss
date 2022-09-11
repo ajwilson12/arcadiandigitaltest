@@ -1,0 +1,24 @@
+@use '../../styles/sass/abstracts/' as *;
+
+.buttonPrimary {
+  color: $primary-color;
+  cursor: pointer;
+  background-color: $brand-color;
+  height: 4.25rem;
+  border-radius: 30px;
+  min-width: 236px;
+  border: none;
+  p {
+    font-weight: $bold;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .buttonPrimary {
+    box-shadow: 4px 4px 50px #252b423b;
+  }
+}

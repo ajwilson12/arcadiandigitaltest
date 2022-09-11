@@ -1,0 +1,25 @@
+@use '../../styles/sass/abstracts/' as *;
+
+.buttonSecondary {
+  color: $primary-color;
+  cursor: pointer;
+  background-color: transparent;
+  height: 4.25rem;
+  border-radius: 30px;
+  border: $primary-color 1px solid;
+  min-width: 236px;
+  p {
+    font-weight: $bold;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .buttonSecondary {
+    color: $brand-color;
+    border: $brand-color 1px solid;
+  }
+}

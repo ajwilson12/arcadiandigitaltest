@@ -1,0 +1,138 @@
+@use '../../styles/sass/abstracts/' as *;
+
+.contentBoxWrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+  margin-top: 50px;
+  margin-bottom: 150px;
+  // direction: rtl;
+}
+
+.contentImgWrapper {
+  align-self: flex-end;
+  justify-self: flex-start;
+  margin-right: -30px;
+}
+
+.contentImgContainer {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  max-width: 320px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.phoneShadow {
+  margin: auto;
+  grid-row: 1;
+  grid-column: 1;
+  width: 60%;
+  height: 90%;
+  box-shadow: 44px 44px 100px #252b4230;
+}
+
+.phoneImg {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.contentContainer {
+  direction: ltr;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 150px;
+  
+}
+
+.contentTextWrapper {
+  width: 561px;
+}
+
+.label {
+  color: $brand-color;
+  font-weight: $bold;
+}
+
+.contentSubHeading {
+  font-size: $subHeading-size;
+  font-weight: $bold;
+  line-height: 57px;
+  margin: 30px 0;
+}
+
+.contentText {
+  color: #737373;
+  line-height: 38px;
+}
+
+@media screen and (max-width: $breakpoint-small-screen ) {
+
+  .contentBoxWrapper {
+    padding: 0px 50px;
+  }
+  
+  .contentTextWrapper {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: $breakpoint-tablet ) {
+  .contentBoxWrapper {
+    max-width: $breakpoint-mobile;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 50%;
+    // direction: rtl;
+    margin-top: 0px;
+    margin-bottom: 100px;
+  }
+  
+  .contentContainer {
+    margin-top: 0px;
+  }
+
+  .contentTextContainer {
+    grid-row: 1;
+  }
+  
+  .contentTextWrapper {
+    text-align: center;
+    width: 100%;
+  }
+
+  .contentText {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .contentImgWrapper {
+    align-self: center;
+    justify-self: center;
+    margin-right: 0px;
+    grid-row: 2;
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile ) {
+
+  .contentBoxWrapper {
+    padding: 0px;
+  }
+
+  .contentSubHeading {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 337px;
+  }
+
+  .contentText {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 257px;
+  }
+}
