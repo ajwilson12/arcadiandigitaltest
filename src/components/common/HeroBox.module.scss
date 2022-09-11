@@ -77,8 +77,13 @@
     margin-top: -5%;
   }
 
+  .subHeading {
+    font-size: 1rem;
+  }
+
   .heroBackground {
     background: transparent;
+    min-height: 700px;
     .subHeading {
       color: $grey-text;
     }
