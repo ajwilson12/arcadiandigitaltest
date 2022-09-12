@@ -20,20 +20,20 @@ const HomeContent = () => {
       />
       <ContentBox
         direction="rtl"
-        label="Create an account"
-        subHeading="Create/login to an existing
-                  account to get started"
-        text="An account is created with your email
-            and a desired password"
+        label="Explore varieties"
+        subHeading="Shop for your favorites
+        meal and enjoy hot."
+        text="Shop for your favorite meals or drinks
+        and enjoy while doing it."
         picture={<PhoneSection2 title="application demo on phone" />}
       />
       <ContentBox
         direction="ltr"
-        label="Create an account"
-        subHeading="Create/login to an existing
-                  account to get started"
-        text="An account is created with your email
-            and a desired password"
+        label="Checkout"
+        subHeading="When you're done check out
+        and get it delivered."
+        text="When you done check out and get it 
+        delivered with ease."
         picture={<PhoneSection3 title="application demo on phone" />}
       />
     </Fragment>

@@ -2,21 +2,21 @@
 import React, { Fragment } from "react";
 
 // components
-import HeroBox from "../common/HeroBox";
+import HeroBox from "../features/HeroBox";
 import SplashImage from "../common/SplashImage";
 import Footer from "../layout/Footer";
 import HeroPhones from "../features/HeroPhones";
 import SubHeading from "../common/SubHeading";
 import HomeContent from "../features/HomeContent";
 
-const Home = () => {
+const Home = (props) => {
   return (
     <Fragment>
-      <HeroBox />
+      <HeroBox clientWidth={props.clientWidth} />
       <HeroPhones />
       <SubHeading />
       <HomeContent />
-      <SplashImage />
+      <SplashImage clientWidth={props.clientWidth} />
       <Footer />
     </Fragment>
   );

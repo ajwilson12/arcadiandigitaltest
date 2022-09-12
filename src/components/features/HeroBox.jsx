@@ -5,22 +5,20 @@ import React, { useState, useEffect } from "react";
 import styles from "./HeroBox.module.scss";
 
 // components
-import ButtonPrimary from "./ButtonPrimary";
-import ButtonSecondary from "./ButtonSecondary";
+import ButtonPrimary from "../common/ButtonPrimary";
+import ButtonSecondary from "../common/ButtonSecondary";
 
-// functions
-import getWindowDimensions from "../../functions/getWindowDimensions";
-const HeroBox = () => {
-  const { width } = getWindowDimensions();
+const HeroBox = (props) => {
+  const { clientWidth } = props;
   const [largeScreen, setLargeScreen] = useState(false);
 
   useEffect(() => {
-    if (width >= 480) {
+    if (clientWidth >= 640) {
       setLargeScreen(true);
     } else {
       setLargeScreen(false);
     }
-  }, [width]);
+  }, [clientWidth]);
 
   return (
     <header className={styles.heroContainer}>

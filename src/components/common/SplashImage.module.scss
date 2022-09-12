@@ -46,9 +46,10 @@
 }
 
 .buttonWrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: 40% 50%;
   justify-content: center;
-  gap: 24px;
+  gap: 17px;
 }
 
 @media screen and (max-width: $breakpoint-small-screen) {
@@ -60,6 +61,10 @@
 @media screen and (max-width: $breakpoint-tablet ) {
   .splashContent {
     padding: 100px 0px;
+  }
+
+  .splashTextFlex {
+    margin-bottom: 60px;
   }
 
   .buttonWrapper {

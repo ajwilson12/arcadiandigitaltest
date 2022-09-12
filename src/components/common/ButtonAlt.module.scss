@@ -1,0 +1,26 @@
+@use '../../styles/sass/abstracts/' as *;
+
+.buttonAlt {
+  color: $primary-color;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: $brand-color;
+  height: 4rem;
+  border-radius:10px;
+  border: none;
+  padding: 0 40px;
+  p {
+    white-space: nowrap;
+    font-weight: $bold;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  .buttonAlt {
+    box-shadow: 4px 4px 50px #252b423b;
+  }
+}

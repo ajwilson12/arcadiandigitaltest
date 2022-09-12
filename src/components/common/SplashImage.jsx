@@ -5,21 +5,16 @@ import React from "react";
 import styles from "./SplashImage.module.scss";
 
 // components
-import ButtonPrimary from "./ButtonPrimary";
+import ButtonAlt from "./ButtonAlt";
 
-// functions
-// functions
-import getWindowDimensions from "../../functions/getWindowDimensions";
-
-// images
-import Image from "../../assets/img/splashImg.png";
-
-const SplashImage = () => {
-  const { width } = getWindowDimensions();
-
+const SplashImage = (props) => {
   const largeScreenText =
     "Available on your favorite store. Start your premium experience now.";
   const smallScreenText = "Most calendars are designed for teams.";
+  const largeScreenButton1Text = "Playstore";
+  const smallScreenButton1Text = "Buy Now";
+  const largeScreenButton2Text = "App Store";
+  const smallScreenButton2Text = "Try for free";
 
   return (
     <section className={styles.splashWrapper}>
@@ -28,21 +23,27 @@ const SplashImage = () => {
           <div className={styles.splashTextFlex}>
             <h2 className={styles.splashSubHeading}>Download the app now.</h2>
             <p className={styles.splashText}>
-              {width >= 769 ? `${largeScreenText}` : `${smallScreenText}`}
+              {props.clientWidth >= 769
+                ? `${largeScreenText}`
+                : `${smallScreenText}`}
             </p>
           </div>
           <div className={styles.buttonWrapper}>
-            <ButtonPrimary
-              text="Playstore"
-              color="$brand-color"
-              showBorder="false"
-              borderRadius="10px"
+            <ButtonAlt
+              text={
+                props.clientWidth >= 769
+                  ? `${largeScreenButton1Text}`
+                  : `${smallScreenButton1Text}`
+              }
+              fill="true"
             />
-            <ButtonPrimary
-              text="App Store"
-              color="transparent"
-              showBorder="true"
-              borderRadius="10px"
+            <ButtonAlt
+              text={
+                props.clientWidth >= 769
+                  ? `${largeScreenButton2Text}`
+                  : `${smallScreenButton2Text}`
+              }
+              fill="false"
             />
           </div>
         </div>
