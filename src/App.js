@@ -13,9 +13,9 @@ function App() {
   const { width } = getWindowDimensions();
 
   return (
-    <div className={styles.App} style={{width: {width} + "px"}}>
-      <Navigation />
-      <Home />
+    <div className={styles.App} style={{width: {width} + "px", minWidth: "300px"}}>
+      <Navigation clientWidth={width}/>
+      <Home clientWidth={width}/>
     </div>
   );
 }
