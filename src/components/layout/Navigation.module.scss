@@ -73,10 +73,9 @@
 
   .navList {
     position: fixed;
-    margin-top: var(--nav-height);
     transition: right, 0.3s ease-out;
     right: -100%;
-    top: 0px;
+    bottom: 0px;
     flex-direction: column;
     width: 100%;
     height: calc(100% - var(--nav-height));

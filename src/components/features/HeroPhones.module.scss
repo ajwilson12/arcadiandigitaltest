@@ -12,6 +12,8 @@
 }
 
 .heroPhoneLeftWrapper{
+  transform-origin: top;
+  transition: all 0.3s ease-out;
   z-index: 2;
   display: grid;
   justify-content: flex-end;
@@ -43,7 +45,9 @@
 }
 
 .rightPhone {
+  transition: all 0.3s ease-out;
   max-width: 300px;
+  transform-origin: center;
 }
 
 @media screen and (max-width: $breakpoint-tablet ) {

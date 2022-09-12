@@ -1,6 +1,7 @@
 @use '../../styles/sass/abstracts/' as *;
 
 .buttonAlt {
+  transition: all 0.3s;
   color: $primary-color;
   font-size: 1rem;
   cursor: pointer;
@@ -17,6 +18,11 @@
     justify-content: center;
     align-items: center;
   }
+}
+
+.buttonAlt:hover {
+  background: $primary-color !important;
+  color: $main-dark;
 }
 
 @media screen and (max-width: $breakpoint-mobile) {

@@ -1,6 +1,7 @@
 @use '../../styles/sass/abstracts/' as *;
 
 .buttonPrimary {
+  transition: all 0.3s;
   color: $primary-color;
   cursor: pointer;
   background-color: $brand-color;
@@ -15,6 +16,11 @@
     justify-content: center;
     align-items: center;
   }
+}
+
+.buttonPrimary:hover {
+  background-color: $primary-color;
+  color: $main-dark;
 }
 
 @media screen and (max-width: $breakpoint-mobile) {

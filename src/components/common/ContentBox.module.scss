@@ -41,6 +41,7 @@
 }
 
 .contentContainer {
+  transition: opacity 1s;
   direction: ltr;
   align-items: center;
   justify-content: flex-end;

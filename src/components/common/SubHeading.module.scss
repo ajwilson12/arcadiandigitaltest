@@ -7,10 +7,12 @@
   text-align: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-top: 45px;
 }
 
 .spacer {
+  transition: all 0.5s;
   width: 100%;
   height: 3px;
   background-color: #E4E4E4;
@@ -19,6 +21,7 @@
 }
 
 .subHeadingText {
+  transition: all 1s;
   font-family: $display-font;
   font-weight: $semiBold;
   font-size: $subHeading-size;

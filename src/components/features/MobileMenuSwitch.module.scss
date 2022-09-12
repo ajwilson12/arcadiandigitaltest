@@ -22,8 +22,8 @@
 }
 
 .line1active {
-  transform: rotate(-50deg);
-  margin-top: 30%;
+  transform: rotate(-45deg);
+  margin-top: 50%;
 }
 
 .line2 {
@@ -37,6 +37,7 @@
 
 .line2active {
   opacity: 0;
+  margin: 0;
 }
 
 .line3 {
@@ -49,8 +50,8 @@
 }
 
 .line3active {
-  transform: rotate(50deg);
-  margin-top: -60%;
+  transform: rotate(45deg);
+  margin-top: -30%;
 }
 
 @media screen and (max-width: $breakpoint-mobile ) {
