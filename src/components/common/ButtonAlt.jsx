@@ -1,6 +1,5 @@
 // library
 import React from "react";
-import { useState } from "react";
 
 // styles
 import styles from "./ButtonAlt.module.scss";

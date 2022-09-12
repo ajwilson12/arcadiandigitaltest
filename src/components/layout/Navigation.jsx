@@ -16,11 +16,6 @@ const Navigation = (props) => {
 
   useEffect(() => {
     // find nav bar height
-
-    // if (props.clientWidth >= 1124) {
-    //   setShowMobileMenu(false);
-    // }
-
     setNavHeight(ref?.current.clientHeight);
     const root = document.documentElement;
     root?.style.setProperty("--nav-height", `${navHeight}px`);

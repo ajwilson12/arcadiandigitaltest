@@ -9,7 +9,6 @@
   grid-template-rows: 1fr;
   margin-top: 50px;
   margin-bottom: 150px;
-  // direction: rtl;
 }
 
 .contentImgWrapper {
@@ -86,7 +85,6 @@
     max-width: $breakpoint-mobile;
     grid-template-columns: 1fr;
     grid-template-rows: 50% 50%;
-    // direction: rtl;
     margin-top: 0px;
     margin-bottom: 100px;
   }
