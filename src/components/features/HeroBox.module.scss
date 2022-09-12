@@ -3,12 +3,14 @@
 .heroBackground {
   width: 100%;
   min-height: 700px;
-  background: url("../../assets/img/HeroImg.jpg") #17101090 no-repeat center;
+  background: url("../../assets/img/HeroImg.jpg") no-repeat center;
+  background-color: #17101090 ;
   background-size: cover;
   background-blend-mode: multiply;
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: fadeIn 2s;
 }
 
 .heroContent {
@@ -80,6 +82,7 @@
 
   .heroBackground {
     background: transparent;
+    background-color: transparent !important;
     min-height: 700px;
     .subHeading {
       color: $grey-text;
@@ -96,5 +99,14 @@
 @media screen and (max-width: 320px) {
   .heroHeading {
     font-size: $text-size;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    background-color: #171010;
+  }
+  100% {
+    background-color: #17101090;
   }
 }
